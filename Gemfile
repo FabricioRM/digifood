@@ -7,6 +7,9 @@ gem 'ransack'
 
 gem 'rack-cors'
 
+#rubocop
+gem 'rubocop', '~> 1.60', '>= 1.60.2'
+
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 
