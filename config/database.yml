@@ -1,0 +1,32 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: digifood_development
+  username: digifood
+  password: chocolate
+  host: datacenter
+  port: 5432
+
+
+production:
+  <<: *default
+  database: digifood_production
+  username: digifood
+  #password: <%= ENV["DIGIFOOD_DATABASE_PASSWORD"] %>
+  username: digifood
+  password: chocolate
+  host: datacenter
+  port: 5432
+
+  test:
+  <<: *default
+  database: digifood_api_test
+  username: digifood
+  password: chocolate
+  host: datacenter
+  port: 5432
